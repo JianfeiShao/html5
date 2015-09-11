@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="loading">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="viewport" content="width=device-width, initial-scale=0.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="keywords" content="CSS酷站收录站 uehtml 网页设计 DIV+CSS Javascript 酷站 酷站收录 网站设计 网页设计 CSS3" />
+<meta name="description" content="优艺客 设计师网站">
+<meta name="author" content="优艺客" />
+<link rel="stylesheet" type="text/css" href="css/mi.css" />
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<link rel="apple-touch-icon-precomposed" href="http://www.17sucai.com/static/images/favicon.ico">
+<script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+<script>
+var logined = 0
+</script>
+<title>主页</title>
+</head>
+
+<body>
+	<div class="wrap-main">
+		<div class="main-content">
+			<div class="profile-main">
+				<div class="profile-info">
+					<div class="profile-top">起风了</div>
+					<div class="profile-self-img">
+						<img src="images/test1.jpg" width="90" height="90">
+					</div>
+					<div class="profile-items">
+						<p class="info-group-item info-group">
+							<!-- 有信息 -->
+							<span class="info-wrap" style="display: none">
+								<span class="employment">填写地址</span>
+								<a class="edit-msg" href="javascript:;">修改</a>
+							</span>
+							<span class="info-empty-wrap" style="display: block;">
+								<a href="javascript:;">填写居住地</a>
+							</span>
+							<span class="info-edit-wrap" style="display: none;">
+								<input class="form-text-input" placeholder="填写住宿地址"/>
+								<a class="btn-blue" href="javascript:;">确认</a>
+							</span>
+						</p>
+						
+					</div>
+					<div style="clear:both;"></div>
+				</div>
+				
+			</div>
+			<div>
+				<span></span>
+			</div>
+			<div class="profile-navbar">
+				<a href="" class="item">
+					提供房东
+					<span class="num">3</span>
+				</a>
+				<a href="" class="item">
+					公共编辑
+					<span class="num">3</span>
+				</a>
+				<a href="" class="item">
+					提供房屋
+					<span class="num">3</span>
+				</a>
+			</div>
+		</div>
+		<!-- 显示贡献 -->
+		<div class="profile-landlord">
+			<p class="profile-landlord-title">
+				<span class="title">提供房东</span>
+			</p>
+			<div class="profile-landlord-items">
+				<a class="profile-vote-count" href="">
+					<div class="profile-vote-num">0</div>
+					<div class="profile-vote-type">游览</div>
+				</a>
+				<div class="profile-landlord-items-main">
+					<h2 class="profile-landlord-add">张三</h2>
+					<p class="profile-landlord-item-text">人太坏了</p>
+				</div>
+			</div>
+			<div class="profile-landlord-items">
+				<a class="profile-vote-count" href="">
+					<div class="profile-vote-num">0</div>
+					<div class="profile-vote-type">游览</div>
+				</a>
+				<div class="profile-landlord-items-main">
+					<h2 class="profile-landlord-add">张三</h2>
+					<p class="profile-landlord-item-text">人太坏了</p>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+/*点击编辑*/
+	$(".info-empty-wrap").click(function(){
+		$(".info-empty-wrap").css("display","none");
+		$(".info-edit-wrap").css("display","block");
+	});
+/*点击保存*/
+	$(".btn-blue").click(function(){
+		var val = $(".form-text-input").val();
+		$(".employment").html(val);
+		$(".info-edit-wrap").css("display","none");
+		$(".info-wrap").css("display","block");
+	});
+/*点击修改*/
+	$(".edit-msg").click(function(){
+		$(".info-edit-wrap").css("display","block");
+		$(".info-wrap").css("display","none");
+		$(".info-wrap").css("display","none");
+	});
+</script>

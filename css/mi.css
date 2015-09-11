@@ -1,0 +1,176 @@
+.wrap-main{
+	border: 1px solid red;
+	margin: 10px;
+}
+.main-content {
+	border: 1px solid #DDD;
+	margin: 10px;
+	border-radius: 0px 0px 5px 5px;
+}
+.profile-main{
+	height: 180px;
+}
+.profile-top{
+	margin: 5px 0px 5px 0px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.profile-info{
+
+	margin: 20px;
+}
+.profile-self-img{
+	width: 90px;
+	height: 90px;
+	border-radius: 10px;
+	overflow: hidden;
+	float: left;
+}
+.profile-items{
+	margin-left: 10px;
+	float: left;
+	font-size: 12px;
+}
+.info-group{
+	padding: 0px;
+	margin: 0px;
+}
+.info-wrap{
+	
+}
+.info-empty-wrap{
+	
+}
+/*相邻兄弟选择器*/
+.info-group-item+.info-group-item{
+	margin-top: 16px;
+}
+.form-text-input{
+	padding: 8px 10px;
+	font-size: 13px;
+	line-height: 15px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1) inset;
+	border-radius: 3px;
+	background: #FFF none repeat scroll 0% 0%;
+	border: 1px solid #CCC;
+	color: #222;
+	outline: none;
+}
+.btn-blue{
+	background: #1575D5  repeat-x scroll 0% 0%;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.5);
+	border: 1px solid #0D6EB8;
+	color: #FFF !important;
+	box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2) inset, 0px 1px 0px rgba(0, 0, 0, 0.2);
+	font-size: 14px;
+	line-height: 1.7;
+	text-decoration: none !important;
+	/**vertical-align: middle;**/
+	display: inline-block;
+	text-align: center;
+	padding: 4px 10px;
+	cursor: pointer;
+	border-radius: 3px;
+	white-space: nowrap;
+	box-sizing: border-box;
+}
+.profile-items a{
+	text-decoration: none;
+	color: #698EBF;
+}
+.profile-items a:hover{
+	text-decoration: underline;
+	color: #698EBF;
+}
+.profile-items a:active{
+	text-decoration: none;
+	color: #698EBF;
+}
+.profile-items a:visited{
+	text-decoration: none;
+	color: #698EBF;	
+}
+.item{
+	float: left;
+	padding: 12px 20px;
+	font-weight: 700;
+	color: #666;
+	text-align: center;
+	font-size: 14px;
+	text-decoration: none;
+	line-height: 22px;
+}
+.num{
+	font-weight: 700;
+	color: #999;
+	text-align: center;
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 400;
+}
+.profile-navbar{
+	height: 50px;
+	box-shadow: 0px 2px 2px #F0F0F0 inset;
+	background-color: #FCFCFC;
+	border-radius: 0px 0px 5px 5px;
+}
+.profile-landlord{
+	border:1px solid #DDD;
+	height: 300px;
+	margin: 10px;
+	border-radius: 5px;
+}
+.profile-landlord-title{
+	border-bottom: 1px solid #DDD;
+	padding: 0px;
+	margin: 0px;
+	line-height: 40px;
+}
+.title{
+	margin-left: 10px;
+}
+.profile-vote-count{
+	float: left;
+	color: #259;
+	text-decoration: none;
+	text-align: center;
+	height: 38px;
+	width: 46px;
+	line-height: 20px;
+	font-weight: 700;
+	border-radius: 4px;
+	background: #EFF6FA none repeat scroll 0% 0%;
+	font-size: 13px;
+	padding: 2px;
+}
+.profile-vote-num{
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1;
+	padding: 2px 0px 4px;
+}
+.profile-vote-type{
+	line-height: 1;
+	font-weight: 400;
+	font-size: 12px;
+}
+.profile-landlord-items{
+	position: relative;
+	padding: 12px 0px;
+	border-bottom: 1px solid #DDD;
+	margin: 0px 10px;
+}
+.profile-landlord-items-main{
+	margin-left: 60px;
+
+}
+.profile-landlord-add{
+	font-weight: 700;
+	font-size: 14px;
+	outline: 0px none;
+	margin: 0px;
+}
+.profile-landlord-item-text{
+	padding: 0px;
+	margin: 0px;
+}

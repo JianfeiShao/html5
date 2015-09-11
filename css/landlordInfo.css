@@ -1,0 +1,160 @@
+html{
+	overflow: scroll;
+}
+body{
+	padding: 0px;
+	margin: 0px;
+}
+.wrapper{
+	margin: 0px auto;
+	
+	width: 95%;
+	height: 100%;
+}
+.wrapper .content{
+	border:1px solid green;
+}
+.profile-header{
+	margin: 10px;
+}
+.title-section{
+	margin: 15px 0px 0px 15px;
+	font-size: 1.4em;
+
+}
+.name{
+	font-weight: 700;
+	color: #222;
+}
+.profile-header-main{
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	box-shadow: 0px 1px 0px #F2F4F5;
+	color: #666;
+}
+.info{
+	margin:15px 0px 15px 15px;
+	overflow: hidden;
+}
+.head-img{
+	overflow: hidden;
+	border-radius: 10px;
+	width: 90px;
+	height: 90px;
+	float: left;
+}
+.data{
+
+	margin-left: 114px;
+}
+.tel{
+	font-size: 15px;
+  	color: #000;
+}
+.data span,.tel span{
+	font-size: 11px;
+}
+.card{
+	font-size: 15px;
+  	color: #000;	
+}
+.house{
+	margin: 15px 0px 0px 15px;
+}
+.house-title{
+	font-weight: bold;
+	font-size: 14px;
+	margin:3px;
+
+}
+.house-own{
+	border-bottom: 1px solid #DDD;
+	box-shadow: 0px 1px 0px #F2F4F5;
+	font-size: 13px;
+	text-indent: 1em;
+}
+.comment-title{
+	margin: 20px 0px 10px 15px;
+	text-align: center;
+	font-weight: bold;
+}
+.wrapper-comment-content{
+	border-radius: 3px;
+	border:1px solid #DDD;
+	box-shadow: 0px 1px 0px #F2F4F5;
+	background: rgba(227, 233, 239, 0.36) none repeat scroll 0% 0%;
+	
+}
+.comment-i{
+	height: 100%;
+	border-top: 1px solid #E1E4E6;
+	font-size: 15px;
+}
+.comment-i a{
+	font-size: 12px;
+	cursor: pointer;
+	color: #1D53BF;
+}
+.comment-i a:visited {
+	color: #1D53BF;
+}
+.comment-i a::active{
+	color: #1D53BF;
+}
+.comment-left{
+  	width: 40px;
+  	margin-top: 11px;
+  	float: left;
+  	text-align: center;
+}
+.comment-right{
+
+	border-right: 1px solid rgb(229, 236, 237);
+  
+  	float: left;
+  	background: #FFF none repeat scroll 0% 0%;
+
+}
+.comment-head-img{
+	display: block;
+
+	height: 20px;
+	width: 20px;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 0px auto;
+}
+.comment-head-img-name{
+	font-size: 10px;
+	color: #1D53BF;
+}
+.comment-head-img-name a:hover{
+	text-decoration: underline;
+}
+.comment-content{
+	margin:15px 0px 5px 15px;
+	height: 100%;
+	width: 460px;
+}
+.wrapper-re-content{
+	margin: 10px 20px 10px 15px;
+  	background: #F7F8FA none repeat scroll 0% 0%;
+  	border: 1px solid #F0F1F2;
+  	width: 450px;
+
+}
+.re-content{
+	border-bottom:1px dashed #CFD3D7 ;
+	margin: 10px;
+	
+}
+.content-reply{
+	text-align: right;
+}
+.release-time{
+	font-size: 10px;
+	color: #999;
+}
+.release-reply{
+
+}
