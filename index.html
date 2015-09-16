@@ -8,16 +8,11 @@
     <meta name="keywords" content="CSS酷站收录站 uehtml 网页设计 DIV+CSS Javascript 酷站 酷站收录 网站设计 网页设计 CSS3" />
     <meta name="description" content="优艺客 设计师网站">
     <meta name="author" content="优艺客" />
-
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-		
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
     <link rel="apple-touch-icon-precomposed" href="http://www.17sucai.com/static/images/favicon.ico">
-		
-    <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
-		
     <script>
     var logined = 0
     </script>
@@ -25,14 +20,14 @@
 </head>
 
 <body>
-		<!-- 页头 -->
+    <!-- 页头 -->
     <div id="header">
         <div id="search">
             <form id="searchform" method="get" action="#">
-                <div id="query">
-                    <input type="text" name="q" type="text" placeholder="名字,电话,证件" />
-                    <input type="submit" value="" />
-                </div>
+                <!--<div id="query">-->
+                <input class="search-input" type="text" name="q" type="text" placeholder="名字,电话,证件" />
+                <input class="search-sub" type="submit" value="" />
+                <!--</div>-->
             </form>
             <button class="add-blacklist">点名</button>
         </div>
@@ -41,10 +36,10 @@
     <div class="top-nav">
         <ul class="top-nav-ul">
             <li class="top-nav-li">
-                <a class="top-nav-link" href="">房东</a>
+                <a class="top-nav-link" href="index.html">房东</a>
             </li>
             <li class="top-nav-li">
-                <a class="top-nav-link" href="">我</a>
+                <a class="top-nav-link" href="mi.html">我</a>
             </li>
         </ul>
     </div>
@@ -55,50 +50,66 @@
                 <ul>
                     <li>
                         <div class="wrap">
-                            <a class="alist" vhref="login.html">
+                            <div class="alist" href="landlordInfo.html">
                                 <div class="list_img fl">
-                                    <img width="90px" height="90px" src="images/test1.jpg">
+                                    <a class="fl" href="landlordInfo.html">
+                                        <img width="90px" height="90px" src="images/test1.jpg">
+                                    </a>
                                 </div>
                                 <div class="list_info">
                                     <h4>名字<span>王小二</span><em>(其它)</em></h4>
                                     <h4>电话<span>18801064475</span></h4>
                                     <h4>身份证<span>412801199202062656</span></h4>
-                                    <div class="list_info_i">
-                                        <dl class="list_info_views">
-                                            <dt></dt>
-                                            <dd>1024</dd>
-                                        </dl>
-                                        <dl class="list_info_comment">
-                                            <dt></dt>
-                                            <dd>5</dd>
-                                        </dl>
-                                    </div>
+                                    <a class="fl" href="landlordInfo.html">
+                                        <div class="list_info_i">
+                                            <dl class="list_info_views">
+                                                <dt></dt>
+                                                <dd>1024</dd>
+                                            </dl>
+                                            <dl class="list_info_comment">
+                                                <dt></dt>
+                                                <dd>5</dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                    <a style="color: #698EBF;margin-left: 50px;font-size: 15px;"
+                                    href="landlordInfo.html">
+                                        管理房屋
+                                    </a>
                                 </div>
-                            </a>
+                            </div> 
                         </div>
                     </li>
                     <li>
                         <div class="wrap">
-                            <a class="alist" vhref="#">
+                            <div class="alist" href="landlordInfo.html">
                                 <div class="list_img fl">
-                                    <img width="90px" height="90px" src="images/test2.jpg">
+                                    <a class="fl" href="landlordInfo.html">
+                                        <img width="90px" height="90px" src="images/test2.jpg">
+                                    </a>
                                 </div>
                                 <div class="list_info">
                                     <h4>名字<span>王小二</span><em>(其它)</em></h4>
                                     <h4>电话<span>18801064475</span></h4>
                                     <h4>身份证<span>412801199202062656</span></h4>
-                                    <div class="list_info_i">
-                                        <dl class="list_info_views">
-                                            <dt></dt>
-                                            <dd>1024</dd>
-                                        </dl>
-                                        <dl class="list_info_comment">
-                                            <dt></dt>
-                                            <dd>5</dd>
-                                        </dl>
-                                    </div>
+                                    <a class="fl" href="landlordInfo.html">
+                                        <div class="list_info_i">
+                                            <dl class="list_info_views">
+                                                <dt></dt>
+                                                <dd>1024</dd>
+                                            </dl>
+                                            <dl class="list_info_comment">
+                                                <dt></dt>
+                                                <dd>5</dd>
+                                            </dl>
+                                        </div>
+                                    </a>
+                                    <a style="color: #698EBF;margin-left: 50px;font-size: 15px;"
+                                    href="landlordInfo.html">
+                                        管理房屋
+                                    </a>
                                 </div>
-                            </a>
+                            </div> 
                         </div>
                     </li>
                 </ul>
@@ -108,9 +119,9 @@
                 </div>
             </div>
         </div>
+        <!-- 添加层 -->
         <div class="modal-dialog-bg">
         </div>
-        <!-- 添加层 -->
         <div class="modal-wrapper">
             <div class="modal-dialog">
                 <div class="modal-dialog-title">
@@ -136,11 +147,11 @@
                                 <h4>管理房子</h4>
                             </div>
                             <p class="add-items-p">
-                                <input type="text" placeholder="区-小区名-几号楼-几单元-门牌号(1301)" />
+                                <input type="text" name="address" placeholder="区-小区名-几号楼-几单元-门牌号(1301)" />
                             </p>
                             <div class="form-command">
-                            	<a href="javascript:;" class="form-command-cancel">取消</a>
-                            	<a href="javascript:;" class="form-command-btn">发布</a>
+                                <a href="javascript:;" class="form-command-cancel">取消</a>
+                                <a href="javascript:;" class="form-command-btn">发布</a>
                             </div>
                         </div>
                     </form>
@@ -148,24 +159,15 @@
             </div>
         </div>
     </div>
-
+    
+    <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
 </body>
 
 </html>
 <script type="text/javascript">
-/*弹出*/
-$(".add-blacklist").click(function(){
-	$(".modal-dialog-bg").css("display","block");
-	$(".modal-wrapper").css("display","flex");
-});
-/*关闭按钮,取消*/
-$(".modal-dialog-title-close,.form-command-cancel").click(function(){
-	$(".modal-dialog-bg").css("display","none");
-	$(".modal-wrapper").css("display","none");
-});
-/*发布*/
-$(".form-command-btn").click(function(){
-	var val = $("input[name='name']")[0].val;
-	alert(val);
-});
+/*宽360 高519*/
+/*屏幕分辨率：1920×1080(1080p)像素*/
+/**alert($(window).width());
+alert($(window).height());**/
 </script>
