@@ -64,3 +64,68 @@ $(".form-command-btn").click(function() {
         }
     })
 });
+
+/*----------------------landlordInfo.html----------------------*/
+$(".nav-items-p").click(function() {
+    $(".nav-items").css("display", "none");
+    $(".comment-publish-warp").css("display", "block");
+});
+$(".a-comment-publish-theme").click(function() {
+    var re = $.ajax({
+        url: 'xxxx',
+        type: 'post',
+        success: function() {
+            alert('提交完成');
+            $(".nav-items").css("display", "block");
+            $(".comment-publish-warp").css("display", "none");
+        },
+        error: function() {
+            return 'error';
+
+        }
+    });
+    console.warn(re);
+    alert(re);
+});
+
+$(".comment-publish").focus(function() {
+    var content = $(".comment-publish").html();
+    if (!content.indexOf('也来说两句')) {
+        $(".comment-publish").html("").css("color", "#000");
+    }
+});
+
+$(".comment-publish").blur(function() {
+    $(".comment-publish-warp").css("display", "none");
+    $(".nav-items").css("display", "block");
+});
+
+/*触屏事件*/
+var obj = document.getElementById('wrapper');
+obj.addEventListener('touchstart', 'click', function(event) {
+    $(".comment-publish-warp").css("display", "none");
+    $(".nav-items").css("display", "block");
+}, false);
+
+function releaseReply(_this) {
+    console.log(_this);
+    var re = $(_this).attr("data-name");
+    alert(re);
+}
+
+//status 0 普通用户 1 楼主
+function reply(obj,user,status) {
+    console.log(obj);
+    console.log(user);
+    var re = $(obj).closest(".wrapper-re-content").find(".reply-content-warp");
+    //var re = $(re1).(".reply-content-warp");
+    var isHide = $(re).css("display") == 'block' ? 'none' : 'block';
+    $(re).css("display",isHide);
+    
+    if(status != 0){
+        $(re).find(".reply-content").html('');
+        return;
+    }
+    $(re).find(".reply-content").html("回复 "+user+" :");
+    console.log(re.html());
+}

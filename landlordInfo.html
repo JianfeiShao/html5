@@ -43,7 +43,7 @@
             </li>
         </ul>
     </div>
-    <div class="wrapper">
+    <div class="wrapper" id="wrapper">
         <div class="profile-header">
             <div class="profile-header-main">
                 <div class="title-section">
@@ -73,7 +73,10 @@
                     <li>北京市-昌平区-天通苑-西三区-九号楼-五单元-1301</li>
                     <li>北京市-昌平区-天通苑-西三区-九号楼-五单元-1301</li>
                     <li>
-                        <a href="">添加</a>
+                        <input type="text" placeholder="城市区-小区-楼栋-单元-门牌" />
+                    </li>
+                    <li>
+                        <a href="javascript:;">添加</a>
                     </li>
                 </ul>
             </div>
@@ -98,16 +101,37 @@
                                     <a href="">张三</a>:<span>内容在这里</span>
                                     <div class="content-reply">
                                         <span class="release-time">2015-02-06</span>
-                                        <a class="release-reply" href="">回复</a>
+                                        <a class="release-reply" data-name="张三"
+                                         href="javascript:;" 
+                                         onclick="reply(this,'test3',0)">回复</a>
                                     </div>
                                 </div>
                                 <div class="re-content">
                                     <a href="">张三</a>:
                                     <span>回复<a href="">李四</a>:这里是回复内容</span>
                                     <div class="content-reply">
-                                        <span class="release-time">2015-02-06</span>
-                                        <a class="release-reply" href="">回复</a>
+                                        <span class="release-time">日期</span>
+                                        <a class="release-reply" href="javascript:;" 
+                                        onclick="reply(this,'test4',0)">
+                                            回复
+                                        </a>
                                     </div>
+                                </div>
+                                <p class="reply-theme-p">
+                                    <a class="reply-theme-btn" href="javascript:;"
+                                        onclick="reply(this,'louzhu',1)">
+                                        回复楼主
+                                    </a>
+                                </p>
+                                <!-- 回复 -->                         
+                                <div class="reply-content-warp">
+                                    <div class="reply-content" contenteditable="true">
+                                        
+                                    </div>
+                                    
+                                    <p class="reply-content-publish">
+                                        <span class="a-sub-publish">发表</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +142,11 @@
                             <a class="comment-head-img" href="">
                                 <img width="20px" height="20px" src="images/test1.jpg">
                             </a>
-                            <span class="comment-head-img-name">李四</span>
+                            <span class="comment-head-img-name">
+                                <a href="">
+                                    李四
+                                </a>
+                            </span>
                         </div>
                         <div class="comment-right">
                             <div class="comment-content">天常常地茫茫风吹草地见牛羊</div>
@@ -126,17 +154,38 @@
                                 <div class="re-content">
                                     <a href="">张三</a>:<span>内容在这里</span>
                                     <div class="content-reply">
-                                        <span>2015-02-06</span>
-                                        <a class="release-reply" href="">回复</a>
+                                        <span class="release-time">2015-02-06</span>
+                                        <a class="release-reply" data-name="张三"
+                                         href="javascript:;" 
+                                         onclick="reply(this,'test3',0)">回复</a>
                                     </div>
                                 </div>
                                 <div class="re-content">
                                     <a href="">张三</a>:
                                     <span>回复<a href="">李四</a>:这里是回复内容</span>
                                     <div class="content-reply">
-                                        <span>2015-02-06</span>
-                                        <a class="release-reply" href="">回复</a>
+                                        <span class="release-time">日期</span>
+                                        <a class="release-reply" href="javascript:;" 
+                                        onclick="reply(this,'test4',0)">
+                                            回复
+                                        </a>
                                     </div>
+                                </div>
+                                <p class="reply-theme-p">
+                                    <a class="reply-theme-btn" href="javascript:;"
+                                        onclick="reply(this,'louzhu',1)">
+                                        回复楼主
+                                    </a>
+                                </p>
+                                <!-- 回复 -->                         
+                                <div class="reply-content-warp">
+                                    <div class="reply-content" contenteditable="true">
+                                        
+                                    </div>
+                                    
+                                    <p  class="reply-content-publish">
+                                        <span class="a-sub-publish">发表</span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -191,27 +240,31 @@
                 </form>
             </div>
         </div>
-        <!-- 用户回复 -->
-        <div class="comment-reply">
-            <p>回复:张三xxxxxxxxxxxxxxxxxxxxxx</p>
-        </div>
     </div>
     <!-- 用户操作菜单 -->
     <div class="comment-nav">
-        <span class="nav-items">赞</span>
-        <span class="nav-items">踩</span>
-        <span class="nav-items">评价</span>
+        <!-- 用户回复 -->
+        <div class="comment-publish-warp">
+            <p class="comment-publish-nav">发表回复
+                <a href="javascript:;" class="a-comment-publish-theme">发表</a>
+            </p>
+            <div class="comment-publish" contenteditable="true">也来说两句</div>
+        </div>
+        <div class="nav-items">
+            <span class="nav-items-d">赞</span>
+            <span class="nav-items-c">踩</span>
+            <span class="nav-items-p">评价</span>
+        </div>
     </div>
     
-    
-    
-    </div>
     <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
     <script type="text/javascript" src="js/base.js"></script>
 </body>
 
 </html>
 <script type="text/javascript">
+
+
 /**-$(document).ready(function() {
     $("#barx").click(function() {
         $("#menux").animate({

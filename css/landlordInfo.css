@@ -84,7 +84,7 @@ body{
 	border:1px solid #DDD;
 	box-shadow: 0px 1px 0px #F2F4F5;
 	background: rgba(227, 233, 239, 0.36) none repeat scroll 0% 0%;
-	
+	height: 1500px;
 }
 .comment-i{
 	/**height: 100%;**/
@@ -148,6 +148,7 @@ body{
 }
 .content-reply{
 	text-align: right;
+	margin-bottom: 5px;
 }
 .release-time{
 	font-size: 10px;
@@ -157,43 +158,105 @@ body{
 	
 }
 
-/*评价导航栏*/
+/*ÆÀ¼Ûµ¼º½À¸*/
 .comment-nav{
     position: fixed;
     bottom: 0;
     line-height: 40px;
-    height: 40px;
+    /**height: 40px;**/
     width: 100%;
-    border-top:1px solid #C3C0C0;
+    border-top:1px solid rgba(195, 192, 192, 0.45);
     text-align: center;
     background-color: rgb(255, 255, 255);
+    z-index: 999;
 }
 .nav-items{
-	background-color: rgb(247, 244, 244);
+	display: block;
+}
+.nav-items-d,.nav-items-c,.nav-items-p{
+	background-color:rgba(245, 247, 249, 0.33);
 	height: 50px;
-	border:1px solid #DAD6D6;
+	border:1px solid rgba(218, 214, 214, 0.63);
 	border-radius: 3px;
 	margin: 0px 10px 0px 10px;
 	padding: 5px 25px 5px 25px;
+	cursor: pointer;
+
 }
 
-/*弹出回复*/
-.comment-reply{
-	width: 300px;
-    border: 4px solid red;
-    margin-right: 0;
+/*·¢±íÆÀ¼Û */
+.comment-publish-warp{
+	display: none;
+	width: 100%;
+    /**margin-right: 0;
     margin-left: 0;
     position: static;
     margin-top: 14%;
     margin-top: 14vh;
-    /**position: absolute;**/
-    z-index: 999;
-    margin: auto;
+    position: fixed;
+    z-index: 888;
     max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 0 80px 0 rgba(0, 0, 0, .4);
-    background: #fff;
+    box-shadow: 0 0 80px 0 rgba(0, 0, 0, .4);**/
+    background: #FFF;
     text-align: left;
-    height: 200px;
-    display: flex;
+    height: 100%;
+    margin: auto;
+}
+.comment-publish{
+	border-radius: 3px;
+	border: 1px solid #62A3E4;
+	outline: none;
+	line-height: normal;
+	padding: 10px;
+	color: #DDD;
+}
+.comment-publish-nav{
+	line-height: normal;
+	padding: 5px 20px 5px 20px;
+}
+.a-comment-publish-theme{
+	float: right;
+}
+
+/*ÆÕÍ¨»Ø¸´*/
+.reply-theme-p{
+	text-align: right;
+	height: 30px;
+    line-height: 30px;
+}
+.reply-theme-btn{
+	border:1px solid #DDD;
+	padding: 5px;
+	/**background-color: #1D53BF;**/
+	border-radius: 3px;
+}
+.reply-content-warp{
+	display: none;
+}
+.reply-content{
+	min-height: 10px;
+	background-color: #FFF;
+	margin-top: 5px;
+	border:1px solid #DDD;
+	outline: none;
+	min-height: 40px;
+}
+.reply-content-publish{
+	/**text-align: right;**/
+	float: right;
+	padding: 5px;
+
+}
+.a-sub-publish{
+    display: block;
+    border-radius: 3px;
+    line-height: 20px;
+    height: 20px;
+    width: 30px;
+    /* align-content: center; */
+    background-color: #1D53BF;
+    text-align: center;
+    cursor: pointer;
+	font-size: 10px;
+    color: #FFF;
 }
