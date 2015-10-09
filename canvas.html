@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no">
+</head>
+
+<body>
+    <div id="slider" style="border:1px solid red;width: 150px;height:100px;">
+        <!-- <img src="images/test1.jpg" id="tulip" /> -->
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+// console.log(this);
+var slider = {
+    slider: document.getElementById('slider'),
+    events: {
+        start: function(event) {
+            console.log(this);
+            alert('开始');
+
+            slider.slider.addEventListener('click',this.start, false);
+        }
+
+    }
+};
+slider.events.start();
+// console.log(slider.events.start);
+// var to = document.getElementById('slider');
+// to.addEventListener('click',function(){
+//     alert('test');
+// },false);
+// slider.events.start();
+// console.log(slider.slider);
+// slider.init();
+</script>

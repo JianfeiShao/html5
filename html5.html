@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="EdieLei" />
+    <title>HTML5 图片上传预览</title>
+    <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('#img').change(function() {
+            var file = this.files[0]; //选择上传的文件
+            var r = new FileReader();
+            r.readAsDataURL(file); //Base64
+            $(r).load(function() {
+                $('div').html('<img src="' + this.result + '" alt="" />');
+            });
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <h3>HTML5 图片上传预览</h3>
+    <input id="img" type="file" accept="image/*" />
+    <div></div>
+</body>
+
+</html>

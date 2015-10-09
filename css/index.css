@@ -35,7 +35,9 @@ li {
 .fl {
     float: left;
 }
-
+.fr{
+    float: right;
+}
 #header {
     position: fixed;
     background-image: -moz-linear-gradient(top, #086ed5, #055db5);
@@ -249,11 +251,33 @@ float: left;
     margin-top: 90px;
 }
 
-#content {
-    border: 1px solid #CCCCCC;
-    border-radius: 10px;
-    margin-top: 10px;
+/*主题*/
+@media (min-width: 400px) {/*大于使用 screen 指计算机屏幕*/
+    #content {
+        /*border: 1px solid #CCCCCC;*/
+        border-radius: 5px;
+        margin-top: 10px;
+        width: 70%;
+        margin:0 auto;
+    }
 }
+/*@media (max-device-width:400px){
+    #content {
+        border: 1px solid #CCCCCC;
+        border-radius: 5px;
+        margin-top: 10px;
+        width: 70%;
+        margin:0 auto;
+    }
+}*/
+@media (max-width: 400px) {/*小于使用 screen 考虑用户打印线*/
+    #content {
+        border: 1px solid #CCCCCC;
+        border-radius: 5px;
+        margin:10px 3px 0px 3px;
+    }
+}
+
 
 #list li .alist {
     width: 100%;
@@ -441,7 +465,7 @@ text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 95;
+    z-index: 888;
     min-height: 100%!important;
     width: 100%!important;
     height: 100%!important;
@@ -615,5 +639,18 @@ text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 .form-command-cancel:active {
     color: #259;
 }
-
+.guide-in-up{
+    line-height: 32px;
+    margin-left: 5px;
+    height: 32px;
+    outline: 0px none;
+    cursor: pointer;
+    color: #FFF;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#58CA6D), to(#23A904));
+    border-radius: 4px;
+    border: 1px solid #1F8C0A;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05), 0px 1px 1px rgba(255, 255, 255, 0.15) inset;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.05);
+    padding: 0px 5px;
+}
 

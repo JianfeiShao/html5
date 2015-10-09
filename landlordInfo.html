@@ -68,33 +68,51 @@
             <div class="house">
                 <p class="house-title">管理的房子</p>
                 <ul class="house-own">
-                    <li>北京市-昌平区-天通苑-西三区-九号楼-五单元-1301</li>
-                    <li>北京市-昌平区-天通苑-西三区-九号楼-五单元-1301</li>
-                    <li>北京市-昌平区-天通苑-西三区-九号楼-五单元-1301</li>
-                    <li>北京市-昌平区-天通苑-西三区-九号楼-五单元-1301</li>
-                    <li>
-                        <input type="text" placeholder="城市区-小区-楼栋-单元-门牌" />
-                    </li>
-                    <li>
-                        <a href="javascript:;">添加</a>
-                    </li>
+                    <li class="house-own-li">北京市-昌平区-天通苑-西三区-九号楼-五单元-1301</li>
+                    <li class="house-own-li">北京市-昌平区-天通苑-西三区-九号楼-五单元-1301</li>
+                    <li class="house-own-li">北京市-昌平区-天通苑-西三区-九号楼-五单元-1301</li>
+                    <li class="house-own-li">北京市-昌平区-天通苑-西三区-九号楼-五单元-1301</li>
                 </ul>
+                <div class="house-content">
+                    <p class="house-content-hint">
+                        例如:城市区-小区-楼栋-单元-门牌(把房东们公开透明)
+                    </p>
+                    <div class="house-add-text" contenteditable="true" ></div>
+                    <p>
+                        <a class="a-sub-publish fr house-content-but" href="javascript:;">提交</a>
+                        <a class="a-sub-publish fr house-content-close" href="javascript:;">取消</a>
+                    </p>
+                </div>
+                <a class="house-show-but" href="javascript:;">补充信息</a>
             </div>
+            <div style="clear: both;"></div>
             <div class="house-comment">
                 <p class="comment-title">评论区</p>
                 <div class="wrapper-comment-content">
                     <div class="comment-i">
                         <div class="comment-left">
                             <a class="comment-head-img" href="">
-                                <img width="20px" height="20px" src="images/test1.jpg">
+                                <img width="25px" height="25px" src="images/test1.jpg">
                             </a>
-                            <span class="comment-head-img-name">
-                                <a href="">
+                            <!-- <p class="comment-head-name-warn">
+                                <a class="comment-head-name" href="javascript:;">
                                     李四
                                 </a>
-                            </span>
+                            </p>
+                            <p class="comment-floor">
+                                1楼                           
+                            </p> -->
                         </div>
                         <div class="comment-right">
+                            <div class="comment-right-head">
+                                <p class="comment-right-head-name">
+                                    <a href="javascript:;">名字好长haochang</a>
+                                </p>
+                                <p class="comment-right-head-floor">
+                                    <span>1楼</span>
+                                    <span>9-18 11:11</span>
+                                </p>
+                            </div>
                             <div class="comment-content">天常常地茫茫风吹草地见牛羊</div>
                             <div class="wrapper-re-content">
                                 <div class="re-content">
@@ -179,7 +197,7 @@
                                 </p>
                                 <!-- 回复 -->                         
                                 <div class="reply-content-warp">
-                                    <div class="reply-content" contenteditable="true">
+                                    <div class="reply-content" id="test123" contenteditable="true">
                                         
                                     </div>
                                     
@@ -245,8 +263,10 @@
     <div class="comment-nav">
         <!-- 用户回复 -->
         <div class="comment-publish-warp">
-            <p class="comment-publish-nav">发表回复
-                <a href="javascript:;" class="a-comment-publish-theme">发表</a>
+            <p class="comment-publish-nav">
+                <span>发表回复</span>
+                <span style="color: #635B5B;font-size: 13px;">文明用语，客观评价</span>
+                <a href="javascript:;" class="a-sub-publish a-comment-publish-theme">发表</a>
             </p>
             <div class="comment-publish" contenteditable="true">也来说两句</div>
         </div>
@@ -263,7 +283,6 @@
 
 </html>
 <script type="text/javascript">
-
 
 /**-$(document).ready(function() {
     $("#barx").click(function() {

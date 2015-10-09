@@ -10,6 +10,7 @@
     <meta name="author" content="优艺客" />
     <link rel="stylesheet" type="text/css" href="css/mi.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/landlordInfo.css" />
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
@@ -45,74 +46,104 @@
             </li>
         </ul>
     </div>
-    <div class="wrap-main">
-        <div class="main-content">
-            <div class="profile-main">
-                <div class="profile-info">
-                    <div class="profile-top">起风了</div>
-                    <div class="profile-self-img">
-                        <img src="images/test1.jpg" width="90" height="90">
+    <div class="mi-wrap">
+        <div class="wrap-main">
+            <div class="main-content">
+                <div class="profile-main">
+                    <div class="profile-info-warn">
+                        <p class="profile-top">起风了</p>
+                        <div class="profile-details">
+                            <div class="profile-left">
+                                <div class="profile-left-img">
+                                    <img src="images/test1.jpg" width="90" height="90">
+                                    <span class="profile-img-text">修改头像</span>
+                                </div>
+                            </div>
+                            <div class="profile-right">
+                                <div class="profile-right-items">
+                                    <a class="profile-right-items-i" href="javascript:;">编辑我的资料</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="profile-items">
+                            <p class="info-group-item info-group">
+                                <span class="info-wrap" style="display: none">
+                                    <span class="employment">填写地址</span>
+                                <a class="edit-msg" href="javascript:;">修改</a>
+                                </span>
+                                <span class="info-empty-wrap" style="display: block;">
+                                    <a href="javascript:;">填写居住地</a>
+                                </span>
+                                <span class="info-edit-wrap" style="display: none;">
+                                    <input class="form-text-input" placeholder="填写住宿地址"/>
+                                    <a class="btn-blue" href="javascript:;">确认</a>
+                                </span>
+                            </p>
+                        </div> -->
+                        <div class="introduce-self-wran" >
+                            <div class="introduce-edit-text" contenteditable="true" >
+                                吾之旧友吊似汝，而今坟头草丈五。<br/>
+                                望坟草兮一丈五，思故友兮吊似汝。<br/>
+                                故友如君，坟草齐眉！<br/>
+                            </div>
+                            <p class="introduce-handle">
+                                <a href="javascript:;" class="a-sub-publish fr m5 handle-sub">确认</a>
+                                <a href="javascript:;" class="a-sub-publish fr m5 handle-close">取消</a>
+                            </p>
+                        </div>
+                        <!-- 存在修改否则填写 -->
+                        <div class="introduce-show">
+                            吾之旧友吊似汝，而今坟头草丈五。<br/>
+                            望坟草兮一丈五，思故友兮吊似汝。<br/>
+                            故友如君，坟草齐眉！<a href="JavaScript:;" class="mi-modification-introduce">修改</a>
+                        </div>
+
+                        <div class="profile-bottom" >
+                            <a href="javascript:;" class="introduce-self">填写个人简介</a>
+                        </div>
+                        
                     </div>
-                    <div class="profile-items">
-                        <p class="info-group-item info-group">
-                            <!-- 有信息 -->
-                            <span class="info-wrap" style="display: none">
-                                <span class="employment">填写地址</span>
-                            <a class="edit-msg" href="javascript:;">修改</a>
-                            </span>
-                            <span class="info-empty-wrap" style="display: block;">
-                                <a href="javascript:;">填写居住地</a>
-                            </span>
-                            <span class="info-edit-wrap" style="display: none;">
-                                <input class="form-text-input" placeholder="填写住宿地址"/>
-                                <a class="btn-blue" href="javascript:;">确认</a>
-                            </span>
-                        </p>
-                    </div>
-                    <div style="clear:both;"></div>
+                </div>
+                
+                <div class="profile-navbar" >
+                    <a href="javascript:;" class="item">
+                        提供房东
+                        <span class="num">3</span>
+                    </a>
+                    <a href="javascript:;" class="item">
+                        公共编辑
+                        <span class="num">3</span>
+                    </a>
+                    <a href="javascript:;" class="item">
+                        提供房屋
+                        <span class="num">3</span>
+                    </a>
                 </div>
             </div>
-            <div>
-                <span></span>
-            </div>
-            <div class="profile-navbar">
-                <a href="" class="item">
-                    提供房东
-                    <span class="num">3</span>
-                </a>
-                <a href="" class="item">
-                    公共编辑
-                    <span class="num">3</span>
-                </a>
-                <a href="" class="item">
-                    提供房屋
-                    <span class="num">3</span>
-                </a>
-            </div>
-        </div>
-        <!-- 显示贡献 -->
-        <div class="profile-landlord">
-            <p class="profile-landlord-title">
-                <span class="title">提供房东</span>
-            </p>
-            <div class="profile-landlord-items">
-                <a class="profile-vote-count" href="">
-                    <div class="profile-vote-num">0</div>
-                    <div class="profile-vote-type">游览</div>
-                </a>
-                <div class="profile-landlord-items-main">
-                    <h2 class="profile-landlord-add">张三</h2>
-                    <p class="profile-landlord-item-text">人太坏了</p>
+            <!-- 显示贡献 -->
+            <div class="profile-landlord" >
+                <p class="profile-landlord-title">
+                    <span class="title">提供房东</span>
+                </p>
+                <div class="profile-landlord-items">
+                    <a class="profile-vote-count" href="">
+                        <div class="profile-vote-num">0</div>
+                        <div class="profile-vote-type">游览</div>
+                    </a>
+                    <div class="profile-landlord-items-main">
+                        <h2 class="profile-landlord-add">张三</h2>
+                        <p class="profile-landlord-item-text">人太坏了</p>
+                    </div>
                 </div>
-            </div>
-            <div class="profile-landlord-items">
-                <a class="profile-vote-count" href="">
-                    <div class="profile-vote-num">0</div>
-                    <div class="profile-vote-type">游览</div>
-                </a>
-                <div class="profile-landlord-items-main">
-                    <h2 class="profile-landlord-add">张三</h2>
-                    <p class="profile-landlord-item-text">人太坏了</p>
+                <div class="profile-landlord-items">
+                    <a class="profile-vote-count" href="">
+                        <div class="profile-vote-num">0</div>
+                        <div class="profile-vote-type">游览</div>
+                    </a>
+                    <div class="profile-landlord-items-main">
+                        <h2 class="profile-landlord-add">张三</h2>
+                        <p class="profile-landlord-item-text">人太坏了</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -121,6 +152,7 @@
     <div class="modal-dialog-bg">
     </div>
     <div class="modal-wrapper">
+        <!-- 添加房东信息 -->
         <div class="modal-dialog">
             <div class="modal-dialog-title">
                 <span class="modal-dialog-title-text">点名</span>
@@ -155,10 +187,64 @@
                 </form>
             </div>
         </div>
+        <!-- 修改头像 -->
+        <div class="container-pictures">
+            <div class="pictures-top">
+                <span style="margin-left: 10px;">修改头像</span>
+                <span class="mi-close">X</span>
+            </div>
+            <div class="imageBox">
+                <div class="thumbBox"></div>
+                <div class="spinner" style="display: none;">Loading...</div>
+            </div>
+            
+            <div class="action">
+                <input type="file" id="file" style="width: 205px">
+                <input type="button" id="btnZoomIn" value="+" style="width: 30px">
+                <input type="button" id="btnZoomOut" value="-" style="width: 30px">
+                <input type="button" id="btnCrop" value="确定" class="mi-but-sub">
+            </div>
+            
+            <div class="cropped"></div>
+        </div>
     </div>
     </div>
     <script type="text/javascript" src="js/jquery-2.0.0.min.js"></script>
     <script type="text/javascript" src="js/base.js"></script>
 </body>
+<script type="text/javascript">
+$(window).load(function() {
+    // alert(0);
+    var options =
+    {
+        thumbBox: '.thumbBox',
+        spinner: '.spinner',
+        imgSrc: 'images/avatar.png'
+    }
+    // alert(1);
+    var cropper = $('.imageBox').cropbox(options);
 
+    $('#file').on('change', function(){
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            console.log('事件--->'+e);
+            options.imgSrc = e.target.result;
+            cropper = $('.imageBox').cropbox(options);
+        }
+        reader.readAsDataURL(this.files[0]);
+        this.files = [];
+    })
+    $('#btnCrop').on('click', function(){
+        var img = cropper.getDataURL();
+        console.log('图片流'+img);
+        $('.cropped').append('<img src="'+img+'">');
+    })
+    $('#btnZoomIn').on('click', function(){
+        cropper.zoomIn();
+    })
+    $('#btnZoomOut').on('click', function(){
+        cropper.zoomOut();
+    })
+});
+</script>
 </html>
