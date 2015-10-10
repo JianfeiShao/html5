@@ -1,4 +1,3 @@
-
 /*---------------------mi.html-----------------------------*/
 /*点击编辑*/
 $(".info-empty-wrap").click(function() {
@@ -23,8 +22,9 @@ $(".edit-msg").click(function() {
 /*-----------------index.html---------------------*/
 /*弹出*/
 $(".add-blacklist").click(function() {
-    $(".modal-dialog-bg").css("display", "block");
-    $(".modal-wrapper").css("display", "flex");
+    $(".modal-dialog-bg").css("display", "block");//背景层
+    $(".modal-wrapper").css("display", "flex");//居中容器，使里面的div居中，display:flex
+    $(".modal-dialog").css("display","block");
 });
 /*关闭按钮,取消*/
 $(".modal-dialog-title-close,.form-command-cancel").click(function() {
@@ -159,26 +159,26 @@ $(".introduce-self").click(function() {
 $(".handle-sub,.handle-close").click(function() {
     $(".introduce-self-wran").css("display", "none");
     $(".profile-bottom").css("display", "block");
-    $(".introduce-show").css("display","block");
+    $(".introduce-show").css("display", "block");
 });
 // 修改 简介
-$(".mi-modification-introduce").click(function(){
+$(".mi-modification-introduce").click(function() {
     // alert('修改');
-    $(".introduce-show").css("display","none");
+    $(".introduce-show").css("display", "none");
     $(".introduce-self-wran").css("display", "block");
     $(".profile-bottom").css("display", "none");
 });
 // 修改 头像
-$(".profile-img-text").click(function(){
-    $(".modal-dialog-bg").css("display","block");
-    $(".modal-wrapper").css("display","flex");
-    $(".modal-dialog").css("display","none");
+$(".profile-img-text").click(function() {
+    $(".modal-dialog-bg").css("display", "block");
+    $(".modal-wrapper").css("display", "flex");
+    $(".modal-dialog").css("display", "none");
 });
 // 关闭头像框
-$(".mi-close").click(function(){
-    $(".modal-dialog-bg").css("display","none");
-    $(".modal-wrapper").css("display","none");
-    $(".modal-dialog").css("display","none"); 
+$(".mi-close").click(function() {
+    $(".modal-dialog-bg").css("display", "none");
+    $(".modal-wrapper").css("display", "none");
+    $(".modal-dialog").css("display", "none");
 });
 /*上传头像*/
 "use strict";
@@ -200,14 +200,14 @@ $(".mi-close").click(function(){
                 console.log('传参，对象本身');
                 console.log(options);
                 console.log($(options.imageBox));
-                
+
                 var el = el || $(options.imageBox),
                     obj = {
                         state: {},
                         ratio: 1,
                         options: options,
                         imageBox: el,
-                        thumbBox: el.find(options.thumbBox),//查找文档里面某个元素
+                        thumbBox: el.find(options.thumbBox), //查找文档里面某个元素
                         spinner: el.find(options.spinner),
                         image: new Image(),
                         getDataURL: function() {
@@ -223,7 +223,7 @@ $(".mi-close").click(function(){
                                 dh = parseInt(size[1]),
                                 sh = parseInt(this.image.height),
                                 sw = parseInt(this.image.width);
-                            
+
                             canvas.width = width;
                             canvas.height = height;
                             var context = canvas.getContext("2d");
@@ -252,7 +252,7 @@ $(".mi-close").click(function(){
                             setBackground();
                         }
                     },
-                    setBackgroundInit = function(){
+                    setBackgroundInit = function() {
                         /*
 
                             100*1.1=显示
@@ -262,13 +262,13 @@ $(".mi-close").click(function(){
                         console.log('进来了');
                         var w;
                         var h;
-                        while(true){
-                            if(w <= 200){
+                        while (true) {
+                            if (w <= 200) {
                                 break;
-                                
+
                             }
                             obj.zoomOut();
-                            console.log(obj.image.width+':'+obj.ratio);
+                            console.log(obj.image.width + ':' + obj.ratio);
                             w = parseInt(obj.image.width) * obj.ratio;
                             h = parseInt(obj.image.height) * obj.ratio;
                             console.log('-----');
@@ -281,11 +281,12 @@ $(".mi-close").click(function(){
                         el.css({
                             'background-image': 'url(' + obj.image.src + ')',
                             'background-size': w + 'px ' + h + 'px',
-                            'background-position': pw + 'px ' + ph + 'px',/*居中效果？*/
+                            'background-position': pw + 'px ' + ph + 'px',
+                            /*居中效果？*/
                             'background-repeat': 'no-repeat'
                         });
                     },
-                    setBackground = function() {//背景图片控制
+                    setBackground = function() { //背景图片控制
                         var w = parseInt(obj.image.width) * obj.ratio;
                         var h = parseInt(obj.image.height) * obj.ratio;
 
@@ -298,7 +299,8 @@ $(".mi-close").click(function(){
                         el.css({
                             'background-image': 'url(' + obj.image.src + ')',
                             'background-size': w + 'px ' + h + 'px',
-                            'background-position': pw + 'px ' + ph + 'px',/*居中效果？*/
+                            'background-position': pw + 'px ' + ph + 'px',
+                            /*居中效果？*/
                             'background-repeat': 'no-repeat'
                         });
                     },
@@ -309,7 +311,7 @@ $(".mi-close").click(function(){
                         obj.state.dragable = true;
                         obj.state.mouseX = e.clientX;
                         obj.state.mouseY = e.clientY;
-                        console.log('按下'+e.clientX+':'+e.clientY);
+                        console.log('按下' + e.clientX + ':' + e.clientY);
                     },
                     imgMouseMove = function(e) {
                         e.stopImmediatePropagation();
@@ -327,7 +329,7 @@ $(".mi-close").click(function(){
 
                             obj.state.mouseX = e.clientX;
                             obj.state.mouseY = e.clientY;
-                            console.log('移动'+e.clientX+':'+e.clientY);
+                            console.log('移动' + e.clientX + ':' + e.clientY);
                         }
                     },
                     imgMouseUp = function(e) {
@@ -340,25 +342,25 @@ $(".mi-close").click(function(){
                         setBackground();
                         console.log('缩小图片');
                     }
-                    obj.spinner.show();
-                    obj.image.onload = function() {
-                        obj.spinner.hide();
-                        // setBackground();
-                        setBackgroundInit();
-                        el.bind('mousedown', imgMouseDown);
-                        el.bind('mousemove', imgMouseMove);
-                        $(window).bind('mouseup', imgMouseUp);
-                        el.bind('mousewheel DOMMouseScroll', zoomImage);
-                    };
+                obj.spinner.show();
+                obj.image.onload = function() {
+                    obj.spinner.hide();
+                    // setBackground();
+                    setBackgroundInit();
+                    el.bind('mousedown', imgMouseDown);
+                    el.bind('mousemove', imgMouseMove);
+                    $(window).bind('mouseup', imgMouseUp);
+                    el.bind('mousewheel DOMMouseScroll', zoomImage);
+                };
 
-                    obj.image.src = options.imgSrc;
-                    el.on('remove', function() {
-                        console.log('移除');
-                        $(window).unbind('mouseup', imgMouseUp)
-                    });
-                    console.log(obj);
-                    
-                    return obj;
+                obj.image.src = options.imgSrc;
+                el.on('remove', function() {
+                    console.log('移除');
+                    $(window).unbind('mouseup', imgMouseUp)
+                });
+                console.log(obj);
+
+                return obj;
             };
 
             jQuery.fn.cropbox = function(options) {
@@ -368,3 +370,101 @@ $(".mi-close").click(function(){
         }
     )
 );
+/*------------------------------login.html-------------------------------*/
+/*登录*/
+/*输入框X号样式*/
+$("#userName").focus(function() {
+    $("#userNameLabel").addClass("userName_label_focus");
+});
+/*账号图片颜色切换*/
+$("#userName").blur(function() {
+    $("#userNameLabel").removeClass("userName_label_focus");
+    buttonChangeColor();
+});
+$("#userName").keyup(function() {
+    buttonChangeColor();
+    if ($("#userName").val().length > 0) {
+        $(".clear_username").css("display", "block");
+        return;
+    };
+    $(".clear_username").css("display", "none");
+})
+
+$("#password").focus(function() {
+    $("#passwordLabel").addClass("password_label_focus");
+});
+/*密码图片颜色切换*/
+$("#password").blur(function() {
+    $("#passwordLabel").removeClass("password_label_focus");
+    buttonChangeColor();
+});
+$("#password").keyup(function() {
+        buttonChangeColor();
+        if ($("#password").val().length > 0) {
+            $(".clear_pass").css("display", "block");
+            return;
+        };
+        $(".clear_pass").css("display", "none");
+    })
+    /*X清除功能*/
+$(".clear_username").click(function() {
+    $("#userName").val("");
+    buttonChangeColor();
+});
+$(".clear_pass").click(function() {
+    $("#password").val("");
+    buttonChangeColor();
+});
+/*切换*/
+$(".js-signup").click(function() {
+    $(".view-signin").css("display", "none");
+    $(".view-signup").css("display", "block");
+});
+$(".js-signin").click(function() {
+    $(".view-signin").css("display", "block");
+    $(".view-signup").css("display", "none");
+});
+/*按钮可用状态*/
+function buttonChangeColor() {
+    var userval = $("#userName").val();
+    var passval = $("#password").val();
+    if (userval != "" && passval != "") {
+        $(".button_submit").css("background-color", "#1D80CF");
+    } else {
+        $(".button_submit").css("background-color", "#CCC");
+    }
+}
+
+/*注册*/
+$("#r_name,#r_account,#r_password").keyup(function() {
+    var rname = $("#r_name").val();
+    var raccount = $("#r_account").val();
+    var rpassword = $("#r_password").val();
+
+    if (rname != "" && raccount != "" && rpassword != "") {
+        $(".sign-button").css("background-color", "#1D80CF");
+    } else {
+        $(".sign-button").css("background-color", "#CCC");
+    }
+});
+/*改变复选框*/
+function changeCheckColor(_this) {
+    if (!$(_this).prop("checked")) {
+        $(".checkbox_member_pass label").css("background", "#FFFFFF");
+        return;
+    };
+    $(".checkbox_member_pass .label_check").css("background", "#2BD52B");
+}
+/*登录层带入按钮*/
+$(".guide-in-up").click(function(){
+    $(".modal-dialog-bg").css("display", "block");
+    $(".modal-wrapper").css("display", "flex");
+    $(".modal-dialog").css("display","none");
+    $(".login").css("display","block");
+});
+/*弹出层登录关闭按钮*/
+$(".login-head").click(function(){
+    $(".modal-dialog-bg").css("display", "none");
+    $(".modal-wrapper").css("display", "none");
+    $(".login").css("display","none");
+});

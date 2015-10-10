@@ -1,20 +1,38 @@
 @charset "utf-8";
 
+/* 主题 */
 @media (min-width: 400px) {
     .wrap-main {
         width: 500px;
-        margin-top: 80px;
         height: 10000px;
+    }
+    .mi-wrap{
+        display: flex;
         margin: 80px auto;
-    }    
+        width: 900px;
+    }
+    .wrap-right{
+        border:1px solid red;
+        height: 1000px;
+        width: 500px;
+    }
 }
+
 @media (max-width: 400px) {
     .wrap-main {
         position: relative;
-        top: 80px;
-        display: inline-block;
-        
-    }   
+        display: inline-block;   
+    }
+    .mi-wrap{
+        display: flex;
+        margin: 80px auto;
+    }
+    .wrap-right{
+        display: none;
+        border:1px solid red;
+        height: 1000px;
+        width: 500px;
+    }
 }
 .main-content {
     border: 1px solid #DDD;
@@ -366,4 +384,11 @@
     cursor: pointer;
     padding: 5px;
     border-radius: 5px;
+}
+.mi-wrap-right-quote{
+    margin: 20px;
+    font-size: 14px;
+    color: #6F6464;
+    border-bottom: 1px solid #CECECE;
+    padding: 10px;
 }
